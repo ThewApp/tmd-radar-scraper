@@ -84,4 +84,4 @@ while True:
                 except Exception as err:
                     logger.warning(f"Could not retrieve {src}: {err}")
 
-    sleep(5)
+    sleep(60)
