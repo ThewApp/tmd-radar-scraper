@@ -3,13 +3,21 @@
 ## Build docker image
 
 ```sh
-docker build tmd-radar-scraper -t tmd-radar-scraper
+docker build https://github.com/ThewApp/tmd-radar-scraper.git#main -t tmd-radar-scraper:main
 ```
 
-## Start container
+## Usage
+
+Start
 
 ```sh
-docker run -it --rm -v tmd-radar-scraper:/app/data --name tmd-radar-scraper tmd-radar-scraper
+docker run -d --restart always -v tmd-radar-scraper:/app/data --name tmd-radar-scraper tmd-radar-scraper:main
+```
+
+Stop
+
+```sh
+docker stop tmd-radar-scraper && docker rm tmd-radar-scraper
 ```
 
 ## View logs
